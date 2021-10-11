@@ -1,5 +1,13 @@
-header {
+$header-background: #cbd4d1;
+
+.header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 10px 40px;
+    background-color: $header_background;
+    
+    div {
+      color: blue;
+    }
 }

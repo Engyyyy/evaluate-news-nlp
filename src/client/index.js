@@ -9,7 +9,6 @@ import './styles/resets.scss'
 
 console.log(validateInput);
 
-alert("I EXIST")
 console.log("CHANGE!!");
 
 export {

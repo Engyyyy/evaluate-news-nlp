@@ -5,10 +5,44 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
     flex: 2;
+    background-color: #65c9a8;
+    text-align: center;
+
+    section {
+      width: 100%;
+    }
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 180px;
+
+  strong {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  div {
+    font-size: 20px;
+    text-align: left;
+
+    li {
+      margin: 3px;
+    }
+
+    p {
+      color: #d13b43;
+    }
+  }
 }
 
 section {
-    max-width: 800px;
     margin: 50px auto;
 }

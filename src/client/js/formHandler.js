@@ -3,15 +3,13 @@ function handleSubmit(event) {
     console.log("::: Form Submitted :::")
     // check what text was put into the form field
     let formText = document.getElementById('name').value
+    document.getElementById('name').value = ''
+
     const result = document.getElementById('results')
+    result.innerHTML = ''
 
     if(Client.validateInput(formText)) {
 
-        // fetch('http://localhost:8081/test')
-        // .then(res => res.json())
-        // .then(function(res) {
-        //     document.getElementById('results').innerHTML = res.message
-        // })
         fetch('http://localhost:8081/submit', {
           method: 'POST',
           headers: {
@@ -43,12 +41,13 @@ function handleSubmit(event) {
             li.textContent = `polarity: ${score_tag}`
             list.appendChild(li)
 
-            result.innerHTML = ''
             result.appendChild(list)
         })
     }
     else {
-        result.textContent = "Please enter a valid URL..."
+        const error = document.createElement('p')
+        error.textContent = "Please enter a valid URL..."
+        result.appendChild(error)
     }
 }
 
